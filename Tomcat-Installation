@@ -8,9 +8,8 @@
 Download tomcat packages from  https://tomcat.apache.org/download-80.cgi onto /opt on EC2 instance
 ```sh 
   # create tomcat directory
-  cd /opt
-  wget http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.29/bin/apache-tomcat-9.0.29.tar.gz
-  tar -xvzf /opt/apache-tomcat-9.0.29.tar.gz
+  cd /opthttps://www.apache.org/dist/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz.sha512
+  tar -xvzf /opt/apache-tomcat-8.5.50.tar.gz
 ```
 give executing permissions to startup.sh and shutdown.sh which are under bin. 
 ```sh
