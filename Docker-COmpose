@@ -1,0 +1,14 @@
+How To Install Docker Compose On Amazon Linux AMI
+By MD Sabair Last updated Jan 30, 2020
+ 
+ 
+# Create EC2 with Amazon Linux AMI
+# Install Docker over it, click here for help
+# Now to install docker-compose, run
+sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-`uname -s`-`uname -m` | sudo tee /usr/local/bin/docker-compose > /dev/null
+# For permission
+sudo chmod +x /usr/local/bin/docker-compose
+# Create a symbolic link
+ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+# Check docker-compose version:
+docker-compose --version
