@@ -2,6 +2,9 @@
 ansible all -m ping
 ansible all -m ping -i ansible_hosts
 
+# How to gather facts of slave machine
+ansible all -m setup
+
 # Tips: -i is used if we are using more than one invertory file 
 
 
@@ -23,7 +26,7 @@ ansible all -m shell -a "cat /etc/passwd|grep -i ansadm" -s --ask-sudo-pass
 ansible all -m shell -a "cat /etc/passwd|grep -i ansadm" -b -K
 
 # Tips: -b is the option for become and by default it will become root user
-        –K is to tell ansible to ask for SUDO password
+        â€“K is to tell ansible to ask for SUDO password
 
 #Execute a command as a different user  (sudo su)
 ansible all -m file -a "path=/home/ansadm/test state=directory mode=0755" -b --become-user=ansadm
